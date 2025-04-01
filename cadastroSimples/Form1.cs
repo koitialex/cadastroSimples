@@ -33,30 +33,30 @@ namespace cadastroSimples
         {
             if (string.IsNullOrEmpty(txtNomeCompleto.Text))
             {
-                errorProvider1.SetError(txtNomeCompleto, "Digite o seu nome completo");
+                epNomeCompleto.SetError(txtNomeCompleto, "Digite o seu nome completo");
                 return false;
 
             }
                 
             if (txtNomeCompleto.Text.Length <= 3)
             {
-                errorProvider1.SetError(txtNomeCompleto, "O nome deve ter mais de 3 caracteres");
+                epNomeCompleto.SetError(txtNomeCompleto, "O nome deve ter mais de 3 caracteres");
                 return false;
 
             }
-            errorProvider1.SetError(txtNomeCompleto, "");
+            epNomeCompleto.SetError(txtNomeCompleto, "");
             return true;
         }
         private bool ValidarEmail()
         {
             if (txtEmail.Text == "" || txtEmail.Text.Trim() == "")
             {
-                MessageBox.Show("Inválido, digite o seu email correto","Erro");
+                epEmail.SetError(txtEmail, "Inválido, digite o seu email correto");
                 return false;
             }
             if (!txtEmail.Text.Contains("@"))
             {
-                MessageBox.Show("Inválido, ausência de @ ", "Erro");
+                epEmail.SetError(txtEmail, "Inválido, ausência de @ ");
                 return false;
             }
             int arroba = txtEmail.Text.IndexOf("@");
@@ -73,10 +73,12 @@ namespace cadastroSimples
                 }
                 else
                 {
+                    epEmail.SetError(txtEmail, "Formato de email inválido.");
                     return false;
                 }
 
             }
+            epEmail.SetError(txtEmail, "Formato de email inválido.");
             return false;
 
         }
@@ -84,29 +86,32 @@ namespace cadastroSimples
         {
             if (string.IsNullOrEmpty(txtIdade.Text))
             {
-                MessageBox.Show("Inválido, digite a idade válida", "Erro");
+                epIdade.SetError(txtIdade,"Inválido, digite a idade válida");
                 return false;
             }
             int idade;
             idade = int.Parse(txtIdade.Text);
             if (idade < 18 || idade > 100)
             {
-                MessageBox.Show("Inválido, Precisa ser de maior de idade", "Erro");
+                epIdade.SetError(txtIdade, "Inválido, Precisa ser de maior de idade");
                 return false;
             }
+            epIdade.SetError(txtIdade, "");
             return true;
         }
         private bool ValidarSenha()
         {
             if (string.IsNullOrEmpty(txtSenha.Text))
             {
-                MessageBox.Show("Inválido, digite uma senha", "Erro");
+                epSenha.SetError(txtSenha,"Inválido, digite uma senha" );
                 return false;
             }
             if (txtSenha.Text.Length < 6)
             {
+                epSenha.SetError(txtSenha, "Inválido, senha requer no mínimo 6 caracteres");
                 return false;
             }
+            epSenha.SetError(txtSenha, "");
             return true;
 
             
@@ -115,23 +120,25 @@ namespace cadastroSimples
         {
             if (string.IsNullOrEmpty(txtConfirmarSenha.Text))
             {
-                MessageBox.Show("Inválido, digite uma senha", "Erro");
+                EpConfirmarSenha.SetError(txtConfirmarSenha,"Inválido, digite uma senha");
                 return false;
             }
             if(txtSenha.Text != txtConfirmarSenha.Text)
             {
-                MessageBox.Show("Inválido, as senhas não são iguais", "Erro");
+                EpConfirmarSenha.SetError(txtConfirmarSenha, "Inválido, as senhas não são iguais");
                 return false;
             }
+            EpConfirmarSenha.SetError(txtConfirmarSenha, "");
             return true;
         }
         private void ValidarCheckBox()
         {
             if (!ckTermosUso.Checked)
             {
-                MessageBox.Show("Obrigatório validar os termos de serviço", "Erro");
+               epTermos.SetError(ckTermosUso,"Obrigatório validar os termos de serviço" );
             }
-                return;
+            epTermos.SetError(ckTermosUso, "");
+            return;
         }
 
         private void Limpar_Click(object sender, EventArgs e)

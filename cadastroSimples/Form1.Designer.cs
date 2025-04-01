@@ -42,16 +42,18 @@
             txtConfirmarSenha = new TextBox();
             ckTermosUso = new CheckBox();
             Limpar = new Button();
-            errorProvider1 = new ErrorProvider(components);
-            errorProvider2 = new ErrorProvider(components);
-            errorProvider3 = new ErrorProvider(components);
-            errorProvider4 = new ErrorProvider(components);
-            errorProvider5 = new ErrorProvider(components);
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider5).BeginInit();
+            epNomeCompleto = new ErrorProvider(components);
+            epEmail = new ErrorProvider(components);
+            epIdade = new ErrorProvider(components);
+            epSenha = new ErrorProvider(components);
+            EpConfirmarSenha = new ErrorProvider(components);
+            epTermos = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)epNomeCompleto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)epEmail).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)epIdade).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)epSenha).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EpConfirmarSenha).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)epTermos).BeginInit();
             SuspendLayout();
             // 
             // btnEnviar
@@ -166,25 +168,29 @@
             Limpar.UseVisualStyleBackColor = true;
             Limpar.Click += Limpar_Click;
             // 
-            // errorProvider1
+            // epNomeCompleto
             // 
-            errorProvider1.ContainerControl = this;
+            epNomeCompleto.ContainerControl = this;
             // 
-            // errorProvider2
+            // epEmail
             // 
-            errorProvider2.ContainerControl = this;
+            epEmail.ContainerControl = this;
             // 
-            // errorProvider3
+            // epIdade
             // 
-            errorProvider3.ContainerControl = this;
+            epIdade.ContainerControl = this;
             // 
-            // errorProvider4
+            // epSenha
             // 
-            errorProvider4.ContainerControl = this;
+            epSenha.ContainerControl = this;
             // 
-            // errorProvider5
+            // EpConfirmarSenha
             // 
-            errorProvider5.ContainerControl = this;
+            EpConfirmarSenha.ContainerControl = this;
+            // 
+            // epTermos
+            // 
+            epTermos.ContainerControl = this;
             // 
             // Form1
             // 
@@ -206,11 +212,12 @@
             Controls.Add(btnEnviar);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)epNomeCompleto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)epEmail).EndInit();
+            ((System.ComponentModel.ISupportInitialize)epIdade).EndInit();
+            ((System.ComponentModel.ISupportInitialize)epSenha).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EpConfirmarSenha).EndInit();
+            ((System.ComponentModel.ISupportInitialize)epTermos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -230,10 +237,11 @@
         private TextBox txtConfirmarSenha;
         private CheckBox ckTermosUso;
         private Button Limpar;
-        private ErrorProvider errorProvider1;
-        private ErrorProvider errorProvider2;
-        private ErrorProvider errorProvider3;
-        private ErrorProvider errorProvider4;
-        private ErrorProvider errorProvider5;
+        private ErrorProvider epNomeCompleto;
+        private ErrorProvider epEmail;
+        private ErrorProvider epIdade;
+        private ErrorProvider epSenha;
+        private ErrorProvider EpConfirmarSenha;
+        private ErrorProvider epTermos;
     }
 }
