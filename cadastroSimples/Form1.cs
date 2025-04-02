@@ -9,7 +9,9 @@ namespace cadastroSimples
         public Form1()
         {
             InitializeComponent();
+           // errorProvider.BlinkRate = 0;
         }
+        //private ErrorProvider errorProvider = new ErrorProvider();
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
@@ -19,14 +21,15 @@ namespace cadastroSimples
             ValidarSenha();
             ValidarConfirmarSenha();
             ValidarCheckBox();
+           
 
-            if(ValidarNome && ValidarEmail && ValidarIdade && ValidarSenha && ValidarConfirmarSenha && ValidarCheckBox)
+            if (ValidarNome() && ValidarEmail() && ValidarIdade() && ValidarSenha() && ValidarConfirmarSenha() && ValidarCheckBox())
             {
                 MessageBox.Show("Sucesso, todos os campos foram preenchidos corretamente", "Sucesso");
             }
             else
             {
-                MessageBox.Show("Um ou mais campos foram preenchidos incorretamente ", "Sucesso");
+                MessageBox.Show("Um ou mais campos foram preenchidos incorretamente ", "Erro");
             }
         }
         private bool ValidarNome()
@@ -99,6 +102,26 @@ namespace cadastroSimples
             epIdade.SetError(txtIdade, "");
             return true;
         }
+        //private bool Validarcpf(string cpf)
+        //{
+        //    cpf = cpf.Remove(3, 1);
+        //    cpf = cpf.Remove(6, 1);
+        //    cpf = cpf.Remove(9, 1);
+        //    if (cpf == null || cpf.Trim() == "" || !cpf.All(char.IsDigit) || cpf.Length != 11)
+        //    {
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        return true;
+        //    }
+        //    return true;
+        //}
+        //private bool ValidarTelefone(string telefone)
+        //{
+        //     telefone = mtbTelefone.Text.Replace("(", "");
+        //    return true
+        //}
         private bool ValidarSenha()
         {
             if (string.IsNullOrEmpty(txtSenha.Text))
@@ -131,14 +154,15 @@ namespace cadastroSimples
             EpConfirmarSenha.SetError(txtConfirmarSenha, "");
             return true;
         }
-        private void ValidarCheckBox()
+        private bool ValidarCheckBox()
         {
             if (!ckTermosUso.Checked)
             {
                epTermos.SetError(ckTermosUso,"Obrigatório validar os termos de serviço" );
+                return false;
             }
             epTermos.SetError(ckTermosUso, "");
-            return;
+            return true;
         }
 
         private void Limpar_Click(object sender, EventArgs e)
@@ -146,9 +170,10 @@ namespace cadastroSimples
             txtNomeCompleto.Clear();
             txtEmail.Clear();
             txtIdade.Clear();
+            //mtbCpf.Clear();
             txtSenha.Clear();
             txtConfirmarSenha.Clear();
-            //ckTermosUso.();
+            ckTermosUso.Checked = false;
         }
     }
 }

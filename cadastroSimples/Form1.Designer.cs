@@ -58,7 +58,7 @@
             // 
             // btnEnviar
             // 
-            btnEnviar.Location = new Point(233, 397);
+            btnEnviar.Location = new Point(145, 368);
             btnEnviar.Name = "btnEnviar";
             btnEnviar.Size = new Size(75, 23);
             btnEnviar.TabIndex = 0;
@@ -69,7 +69,7 @@
             // lblNomeCompleto
             // 
             lblNomeCompleto.AutoSize = true;
-            lblNomeCompleto.Location = new Point(234, 42);
+            lblNomeCompleto.Location = new Point(145, 72);
             lblNomeCompleto.Name = "lblNomeCompleto";
             lblNomeCompleto.Size = new Size(96, 15);
             lblNomeCompleto.TabIndex = 1;
@@ -77,7 +77,7 @@
             // 
             // txtNomeCompleto
             // 
-            txtNomeCompleto.Location = new Point(237, 67);
+            txtNomeCompleto.Location = new Point(145, 100);
             txtNomeCompleto.Name = "txtNomeCompleto";
             txtNomeCompleto.Size = new Size(228, 23);
             txtNomeCompleto.TabIndex = 2;
@@ -85,7 +85,7 @@
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(241, 96);
+            lblEmail.Location = new Point(145, 126);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(36, 15);
             lblEmail.TabIndex = 3;
@@ -93,7 +93,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(237, 125);
+            txtEmail.Location = new Point(145, 144);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(228, 23);
             txtEmail.TabIndex = 4;
@@ -101,7 +101,7 @@
             // lblIdade
             // 
             lblIdade.AutoSize = true;
-            lblIdade.Location = new Point(233, 157);
+            lblIdade.Location = new Point(145, 170);
             lblIdade.Name = "lblIdade";
             lblIdade.Size = new Size(36, 15);
             lblIdade.TabIndex = 5;
@@ -109,15 +109,15 @@
             // 
             // txtIdade
             // 
-            txtIdade.Location = new Point(237, 186);
+            txtIdade.Location = new Point(145, 188);
             txtIdade.Name = "txtIdade";
-            txtIdade.Size = new Size(125, 23);
+            txtIdade.Size = new Size(110, 23);
             txtIdade.TabIndex = 6;
             // 
             // lblSenha
             // 
             lblSenha.AutoSize = true;
-            lblSenha.Location = new Point(237, 221);
+            lblSenha.Location = new Point(145, 221);
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(39, 15);
             lblSenha.TabIndex = 7;
@@ -125,7 +125,7 @@
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(237, 239);
+            txtSenha.Location = new Point(145, 239);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(228, 23);
@@ -134,7 +134,7 @@
             // lblConfirmarSenha
             // 
             lblConfirmarSenha.AutoSize = true;
-            lblConfirmarSenha.Location = new Point(233, 276);
+            lblConfirmarSenha.Location = new Point(145, 273);
             lblConfirmarSenha.Name = "lblConfirmarSenha";
             lblConfirmarSenha.Size = new Size(95, 15);
             lblConfirmarSenha.TabIndex = 9;
@@ -142,7 +142,7 @@
             // 
             // txtConfirmarSenha
             // 
-            txtConfirmarSenha.Location = new Point(233, 302);
+            txtConfirmarSenha.Location = new Point(145, 291);
             txtConfirmarSenha.Name = "txtConfirmarSenha";
             txtConfirmarSenha.PasswordChar = '*';
             txtConfirmarSenha.Size = new Size(228, 23);
@@ -151,16 +151,16 @@
             // ckTermosUso
             // 
             ckTermosUso.AutoSize = true;
-            ckTermosUso.Location = new Point(233, 340);
+            ckTermosUso.Location = new Point(145, 332);
             ckTermosUso.Name = "ckTermosUso";
-            ckTermosUso.Size = new Size(102, 19);
+            ckTermosUso.Size = new Size(137, 19);
             ckTermosUso.TabIndex = 11;
-            ckTermosUso.Text = "Termos de uso";
+            ckTermosUso.Text = "Concordo com tudo ";
             ckTermosUso.UseVisualStyleBackColor = true;
             // 
             // Limpar
             // 
-            Limpar.Location = new Point(374, 399);
+            Limpar.Location = new Point(298, 368);
             Limpar.Name = "Limpar";
             Limpar.Size = new Size(75, 23);
             Limpar.TabIndex = 12;
@@ -196,7 +196,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(546, 450);
             Controls.Add(Limpar);
             Controls.Add(ckTermosUso);
             Controls.Add(txtConfirmarSenha);
